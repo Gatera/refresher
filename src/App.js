@@ -11,7 +11,9 @@ function App() {
   ]);
 
   function addNewGoalHandler(newGoal) {
-    setCourseGoals(courseGoals.concat(newGoal));
+    setCourseGoals((prevCourseGoals) => {
+      return courseGoals.concat(newGoal);
+    });
   }
 
   return (
